@@ -6,7 +6,9 @@ console.log(players)
 const express = require('express')
 const app = express()
 const fs = require('fs');
+const ejs = require('ejs')
 const port = 3000
+app.set('view engine','ejs')
 //const testFolder = 'c:\\temp';
 
 app.get('/', (req, res) => {
@@ -14,7 +16,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/contact', (req, res) => {
-  res.send('Don’t contact us at all!')
+  res.send('Don’t contact us at all!<h1>Hej</h1>')
+})
+
+app.get('/players',(req,res)=>{
+    res.render('players')    
 })
 
 // app.get('/listing', (req, res) => {
