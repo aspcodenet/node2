@@ -19,8 +19,25 @@ app.get('/contact', (req, res) => {
   res.send('Don’t contact us at all!<h1>Hej</h1>')
 })
 
+
+app.get('/playersjson',(req,res)=>{
+    const test = [
+        {namn:"Foppa",jersey:21, team:"Colorado"},
+        {namn:"Sudden",jersey:13, team:"Toronto"}
+    ]
+    res.json(test)
+})
+
+
 app.get('/players',(req,res)=>{
-    res.render('players')    
+    let  discount = 1 // Vi läser från databas - vi kollar veckodag osv
+    //if day == tuesday discount 5
+
+    res.render('players',{
+        todaysDiscount: discount,
+        players:players
+    })    
+
 })
 
 // app.get('/listing', (req, res) => {
