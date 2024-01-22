@@ -11,5 +11,6 @@ discount = 3
 
 module.exports.players = players //KNAPPAR PÅ DATORN - vad exponerar vi utåt
 module.exports.bestJersey = bestJersey
+// return module.exports
 //}
 
