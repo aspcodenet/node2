@@ -6,6 +6,36 @@ const rectangle = {
   area: 200,
   perimeter: 60
 }
+
+
+function calculateArea({height,width}){
+    return height * width
+}
+let area = calculateArea({
+    width:10,
+    height:30
+})
+function calculateArea2(o){
+    let {height,width} = o
+    return height * width
+}
+let area2 = calculateArea2({
+    width:10,
+    height:30
+})
+
+    
+    
+
+// let o = {
+//     width:10,
+//     height:30
+// }
+
+// let area = calculateArea(o)
+
+let {width,height} = rectangle
+
 const users = [
 {
   name:'Brook',
